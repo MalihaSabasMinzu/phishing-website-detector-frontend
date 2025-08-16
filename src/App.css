@@ -1,42 +1,94 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+	background: #f6f8fa;
+	font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.container {
+	max-width: 480px;
+	margin: 40px auto;
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+	padding: 2.5rem 2rem 2rem 2rem;
+	text-align: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header h1 {
+	margin-bottom: 1.5rem;
+	font-size: 2rem;
+	color: #2d3748;
+	letter-spacing: 1px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.url-form {
+	display: flex;
+	gap: 0.5rem;
+	justify-content: center;
+	margin-bottom: 1.5rem;
 }
 
-.card {
-  padding: 2em;
+.url-input {
+	flex: 1;
+	padding: 0.75rem 1rem;
+	border: 1px solid #cbd5e1;
+	border-radius: 6px;
+	font-size: 1rem;
+	outline: none;
+	transition: border-color 0.2s;
+}
+.url-input:focus {
+	border-color: #3182ce;
 }
 
-.read-the-docs {
-  color: #888;
+.submit-btn {
+	padding: 0.75rem 1.2rem;
+	background: #3182ce;
+	color: #fff;
+	border: none;
+	border-radius: 6px;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+.submit-btn:disabled {
+	background: #90cdf4;
+	cursor: not-allowed;
+}
+.submit-btn:not(:disabled):hover {
+	background: #2563eb;
+}
+
+.result-section {
+	min-height: 48px;
+}
+
+.loader {
+	color: #3182ce;
+	font-size: 1.1rem;
+	margin-top: 0.5rem;
+}
+
+.result {
+	font-size: 1.2rem;
+	font-weight: 500;
+	margin-top: 0.5rem;
+	padding: 0.75rem 1rem;
+	border-radius: 6px;
+	display: inline-block;
+}
+.result.phishing {
+	background: #ffe5e5;
+	color: #c53030;
+	border: 1px solid #feb2b2;
+}
+.result.safe {
+	background: #e6fffa;
+	color: #2c7a7b;
+	border: 1px solid #81e6d9;
+}
+
+.error {
+	color: #c53030;
+	margin-top: 0.5rem;
+	font-size: 1rem;
 }
