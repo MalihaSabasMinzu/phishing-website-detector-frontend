@@ -50,6 +50,18 @@ body {
 	cursor: pointer;
 	transition: background 0.2s;
 }
+
+.paste-btn {
+	padding: 0.75rem 1.2rem;
+	background: #e2e8f0;
+	color: #2d3748;
+	border: none;
+	border-radius: 6px;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+
 .submit-btn:disabled {
 	background: #90cdf4;
 	cursor: not-allowed;
